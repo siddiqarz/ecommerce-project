@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import HomePage from './homepage.component';
+import HomePage from './pages/homepage/homepage.component';
 
-
+const menuItems =['HATS', 'JACKETS', 'SNEAKERS', 'WOMENS', 'MENS']
 function App() {
   return (
-    <HomePage></HomePage>
-  );
+<HomePage items={menuItems}/>  
+);
 }
 
 export default App;
