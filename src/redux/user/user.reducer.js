@@ -4,13 +4,15 @@
 type(of a string value, named whatever we want) and it might or might not have payload. 
 Payload can be anything. We can do something with it to update the state or make transformations. It;s a flexible property gotten on action object*/
 
+import { UserActionTypes } from "./user.types";
+
 const INITIAL_STATE = {
   currentUser: null,
 };
 
 const userReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case 'SET_CURRENT_USER':
+    case UserActionTypes.SET_CURRENT_USER:
         return{
             ...state,
             currentUser: action.payload
